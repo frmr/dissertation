@@ -1,0 +1,5 @@
+cpm (Copy to mic) - Takes any number of filenames as arguments and copies those files to mic0
+run - Run on mic to set up requirements environment variables
+sshm (SSH to mic) - Copies run and some library files to mic0, then calls ssh mic0
+vtune - runs VTune Amplifier XE with commands
+get - copies text files (which should contains results) from mic0 to results folder

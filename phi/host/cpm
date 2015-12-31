@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while [ "$1" != "" ]; do
+    scp -r "$1" mic0:~
+    shift
+done

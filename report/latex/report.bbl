@@ -1,0 +1,206 @@
+\begin{thebibliography}{10}
+
+\bibitem{xeondatasheet}
+Intel, ``{Intel Xeon Processor E5-1600/2600/4600: Datasheet Vol.1}.''
+  \url{http://www.intel.com/content/dam/www/public/us/en/documents/datasheets/xeon-e5-1600-2600-vol-1-datasheet.pdf}.
+\newblock Accessed: 2015-09-27.
+
+\bibitem{overviewxeonandxeonphi}
+Intel, ``{An Overview of Programming for Intel Xeon processors and Intel Xeon
+  Phi coprocessor}.''
+  \url{https://software.intel.com/en-us/articles/an-overview-of-programming-for-intel-xeon-processors-and-intel-xeon-phi-coprocessors}.
+\newblock Accessed: 2015-09-27.
+
+\bibitem{Andrews99}
+G.~R. Andrews, {\em {Foundations of Parallel and Distributed Programming}}.
+\newblock Boston, MA, USA: Addison-Wesley Longman Publishing Co., Inc.,
+  1st~ed., 1999.
+
+\bibitem{Olivier09}
+S.~L. Olivier and J.~F. Prins, ``{Evaluating OpenMP 3.0 Run Time Systems on
+  Unbalanced Task Graphs},'' in {\em Proceedings of the 5th International
+  Workshop on OpenMP: Evolving OpenMP in an Age of Extreme Parallelism}, IWOMP
+  '09, (Berlin, Heidelberg), pp.~63--78, Springer-Verlag, 2009.
+
+\bibitem{Duran09}
+A.~Duran, X.~Teruel, R.~Ferrer, X.~Martorell, and E.~Ayguade, ``{Barcelona
+  OpenMP Tasks Suite: A Set of Benchmarks Targeting the Exploitation of Task
+  Parallelism in OpenMP},'' in {\em Proceedings of the 2009 International
+  Conference on Parallel Processing}, ICPP '09, (Washington, DC, USA),
+  pp.~124--131, IEEE Computer Society, 2009.
+
+\bibitem{Dailey01}
+D.~Dailey and C.~E. Leiserson, ``{Using Cilk to Write Multiprocessor Chess
+  Programs},'' {\em The Journal of the International Computer Chess
+  Association}, 2001.
+
+\bibitem{pthreads}
+L.~L.~N. Laboratory, ``{POSIX Threads Programming}.''
+  \url{https://computing.llnl.gov/tutorials/pthreads/}.
+\newblock Accessed: 2015-09-27.
+
+\bibitem{Hwang98}
+K.~Hwang and Z.~Xu, {\em Scalable Parallel Computing:
+  Technology,Architecture,Programming}.
+\newblock New York, NY, USA: McGraw-Hill, Inc., 1998.
+
+\bibitem{Ayguade09}
+E.~Ayguad{\'e}, N.~Copty, A.~Duran, J.~Hoeflinger, Y.~Lin, F.~Massaioli,
+  X.~Teruel, P.~Unnikrishnan, and G.~Zhang, ``{The Design of OpenMP Tasks},''
+  {\em IEEE Trans. Parallel Distrib. Syst.}, vol.~20, pp.~404--418, Mar. 2009.
+
+\bibitem{Podobas15}
+A.~Podobas, M.~Brorsson, and K.-F. Fax{\'e}n, ``{A Comparative Performance
+  Study of Common and Popular Task-centric Programming Frameworks},'' {\em
+  Concurr. Comput. : Pract. Exper.}, vol.~27, pp.~1--28, Jan. 2015.
+
+\bibitem{Jeffers13}
+J.~Jeffers and J.~Reinders, {\em {Intel Xeon Phi Coprocessor High-Performance
+  Programming}}.
+\newblock Morgan Kaufmann, 2013.
+
+\bibitem{Blumofe95}
+R.~D. Blumofe, C.~F. Joerg, B.~C. Kuszmaul, C.~E. Leiserson, K.~H. Randall, and
+  Y.~Zhou, ``{Cilk: An Efficient Multithreaded Runtime System},'' {\em SIGPLAN
+  Not.}, vol.~30, pp.~207--216, Aug. 1995.
+
+\bibitem{Leiserson97}
+C.~E. Leiserson, ``{Programming Irregular Parallel Applications in Cilk},'' in
+  {\em Proceedings of the 4th International Symposium on Solving Irregularly
+  Structured Problems in Parallel}, IRREGULAR '97, (London, UK, UK),
+  pp.~61--71, Springer-Verlag, 1997.
+
+\bibitem{cilkplussite}
+Intel, ``{Intel Cilk Plus}.'' \url{https://www.cilkplus.org/}.
+\newblock Accessed: 2015-09-27.
+
+\bibitem{Tousimojarad14}
+A.~Tousimojarad and W.~Vanderbauwhede, ``{Comparison of three popular parallel
+  programming models on the Intel Xeon Phi},'' in {\em Euro-Par 2014: Parallel
+  Processing Workshops}, pp.~314--325, Springer International Publishing, 2014.
+
+\bibitem{openmpsite}
+O.~A.~R. Board, ``{The OpenMP API Specification for Parallel Programming}.''
+  \url{http://openmp.org/}.
+\newblock Accessed: 2015-09-27.
+
+\bibitem{Hook05}
+B.~Hook, {\em {Write Portable Code: An Introduction to Developing Software for
+  Multiple Platforms}}.
+\newblock No Starch Press, 2005.
+\newblock p.116.
+
+\bibitem{openmpspec}
+O.~A.~R. Board, ``{OpenMP Application Program Interface Version 3.0}.''
+  \url{http://www.openmp.org/mp-documents/spec30.pdf}.
+\newblock Accessed: 2015-09-27.
+
+\bibitem{openmpaffinity}
+R.~W.~G. (Intel), ``{OpenMP Thread Affinity Control}.''
+  \url{https://software.intel.com/en-us/articles/openmp-thread-affinity-control}.
+\newblock Accessed: 2015-09-27.
+
+\bibitem{Wang14}
+E.~Wang, Q.~Zhang, B.~Shen, G.~Zhang, X.~Lu, Q.~Wu, and Y.~Wang, {\em
+  High-Performance Computing on the Intel Xeon Phi(TM): How to Fully Exploit
+  MIC Architectures}.
+\newblock Springer Publishing Company, Incorporated, 2014.
+\newblock p.67.
+
+\bibitem{xeonoverview}
+Intel, ``{Intel Xeon Processor E5-2600/4600 Product Family Technical
+  Overview}.''
+  \url{https://software.intel.com/en-us/articles/intel-xeon-processor-e5-26004600-product-family-technical-overview#_Toc341794172}.
+\newblock Accessed: 2015-09-27.
+
+\bibitem{intel5110p}
+Intel, ``{Intel Xeon Phi Coprocessor 5110P}.''
+  \url{http://ark.intel.com/products/71992/Intel-Xeon-Phi-Coprocessor-5110P-8GB-1_053-GHz-60-core}.
+\newblock Accessed: 2015-09-27.
+
+\bibitem{Nieuwpoort01}
+R.~V. van Nieuwpoort, T.~Kielmann, and H.~E. Bal, ``{Efficient Load Balancing
+  for Wide-area Divide-and-conquer Applications},'' {\em SIGPLAN Not.},
+  vol.~36, pp.~34--43, June 2001.
+
+\bibitem{Olivier12}
+S.~L. Olivier, A.~K. Porterfield, K.~B. Wheeler, M.~Spiegel, and J.~F. Prins,
+  ``{OpenMP Task Scheduling Strategies for Multicore NUMA Systems},'' {\em Int.
+  J. High Perform. Comput. Appl.}, vol.~26, pp.~110--124, May 2012.
+
+\bibitem{Dahl72}
+O.~J. Dahl, E.~W. Dijkstra, and C.~A.~R. Hoare, eds., {\em {Structured
+  Programming}}.
+\newblock London, UK, UK: Academic Press Ltd., 1972.
+
+\bibitem{Blair12}
+S.~Blair-Chappell and A.~Stokes, {\em {Parallel Programming with Intel Parallel
+  Studio XE}}.
+\newblock ITPro collection, Wiley, 2012.
+
+\bibitem{Vinter08}
+B.~Vinter and M.~Rehr, ``{Application porting and tuning for the CELL-BE
+  processor},'' 2008.
+
+\bibitem{UtsSite}
+P.~Sadayappan, J.~Dinan, G.~Sebin, C.-W. Tseng, J.~Prins, and S.~Oliver, ``{The
+  Unbalanced Tree Search Benchmark}.''
+  \url{http://sourceforge.net/p/uts-benchmark/wiki/Home/}.
+\newblock Accessed: 2015-09-20.
+
+\bibitem{UtsSimpleSite}
+J.~Breitbart, ``{A minimal sequential version of the UTS benchmark}.''
+  \url{https://github.com/jbreitbart/uts-simple}.
+\newblock Accessed: 2015-09-20.
+
+\bibitem{Olivier10}
+S.~Olivier and J.~Prins, ``{Comparison of OpenMP 3.0 and Other Task Parallel
+  Frameworks on Unbalanced Task Graphs},'' {\em International Journal of
+  Parallel Programming}, vol.~38, no.~5-6, pp.~341--360, 2010.
+
+\bibitem{Rdtsc}
+Intel, ``{Using the RSTSC Instruction for Performance Monitoring}.''
+  \url{https://www.ccsl.carleton.ca/~jamuir/rdtscpm1.pdf}.
+\newblock Accessed: 2015-09-20.
+
+\bibitem{GameTiming}
+C.~Walbourn, ``{Game Timing and Multicore Processors}.'' XNA Developer
+  Connection (XDC), Dec 2005.
+\newblock Accessed: 2015-09-20.
+
+\bibitem{Frigo98}
+M.~Frigo, C.~E. Leiserson, and K.~H. Randall, ``{The Implementation of the
+  Cilk-5 Multithreaded Language},'' {\em SIGPLAN Not.}, vol.~33, pp.~212--223,
+  May 1998.
+
+\bibitem{Lima13}
+J.~Lima, F.~Broquedis, T.~Gautier, and B.~Raffin, ``{Preliminary Experiments
+  with XKaapi on Intel Xeon Phi Coprocessor},'' in {\em Computer Architecture
+  and High Performance Computing (SBAC-PAD), 2013 25th International Symposium
+  on}, pp.~105--112, Oct 2013.
+
+\bibitem{Cramer12}
+D.~an~Mey, D.~Schmidl, T.~Cramer, and M.~Klemm, ``{OpenMP Programming on Intel
+  Xeon Phi Coprocessors: An Early Performance Comparison},'' in {\em
+  Proceedings of the Many-core Applications Research Community (MARC) Symposium
+  at RWTH Aachen University} (S.~Lankes and C.~Clauss, eds.), pp.~38--44, Nov.
+  2012.
+
+\bibitem{Saule12}
+E.~Saule and U.~V. Catalyurek, ``{An Early Evaluation of the Scalability of
+  Graph Algorithms on the Intel MIC Architecture},'' in {\em Proceedings of the
+  2012 IEEE 26th International Parallel and Distributed Processing Symposium
+  Workshops \& PhD Forum}, IPDPSW '12, (Washington, DC, USA), pp.~1629--1639,
+  IEEE Computer Society, 2012.
+
+\bibitem{Leiserson09}
+C.~E. Leiserson, ``{The Cilk++ Concurrency Platform},'' in {\em Proceedings of
+  the 46th Annual Design Automation Conference}, DAC '09, (New York, NY, USA),
+  pp.~522--527, ACM, 2009.
+
+\bibitem{woolsite}
+K.-F. Faxen, ``{Wool - fine grained independent task parallelism in C}.''
+  \url{https://www.sics.se/~kff/wool/}.
+\newblock Accessed: 2015-09-27.
+
+\end{thebibliography}

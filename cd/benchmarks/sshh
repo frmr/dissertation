@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ssh -t USERNAME@IP "cd 809130 ; bash"

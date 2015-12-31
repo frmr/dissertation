@@ -1,0 +1,10 @@
+This directory contains all implementations of the Fibonacci benchmark:
+
+File                Description
+--------------------------------------------------------------------------------
+fib_cilk.c          Standard version of the Fibonacci benchmark using Cilk Plus.
+fib_cutoff_cilk.c   Cut-off version of the Fibonacci benchmark using Cilk Plus.
+fib_cutoff_omp.c    Cut-off version of the Fibonacci benchmark using OpenMP.
+fib_omp.c           Standard version of the Fibonacci benchmark using OpenMP.
+fib_serial.c        Standard version of the Fibonacci benchmark using no
+                    parallel framework.

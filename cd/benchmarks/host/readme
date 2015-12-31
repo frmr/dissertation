@@ -1,0 +1,44 @@
+The contents of this directory will be in the working directory when copied to
+the host machine. Below is a description of each scripts, followed by
+a list of commands that should be executed to repeat the trials described in
+the project report.
+
+Script      Description
+--------------------------------------------------------------------------------
+benchh      "Benchmark on Host". Run all benchmarks on the host machine. Note
+            that the benchmarks must be compiled first.
+benchm      "Benchmark on MIC". Run all benchmarks on the Xeon Phi. Note that
+            this script must be copied to the Xeon Phi first and run in the same
+            directory as the benchmarks. Benchmarks must also be compile first.
+cpm         "Copy to MIC". Copy files listed in the arguments to mic0.
+            Usage: ./cpm <file0> <file1> ... <fileN>
+get         Copy all contents of the "results" folder on mic0 to the
+            "results" folder in this directory.
+runh        "Run on Host". Run the program passed as an argument on the host
+            machine. This script sets the environment path for accessing a
+            required Intel library.
+            Usage: ./runh <executable>
+runm        "Run on MIC". Run the program passed as an argument on the host
+            machine. This script sets the environment path for accessing a
+            required Intel library.
+            Usage: ./runm <executable>
+sshm        "SSH to MIC". Connect to mic0 using the SSH protocol. Also copies
+            benchm, runm and two required Intel libraries to mic0.
+vtune       Run Intel VTune Amplifier XE. See VTune Amplifier documentation for
+            more information.
+            Usage: ./vtune <arg0> <arg1> ... <argN>
+
+
+
+To rerun the benchmarks described in the project report, run the following
+commands, starting in this directory:
+
+    cd benchmarks
+    ./build
+    cd ..
+    ./cpm benchmarks results
+    ./sshm
+    ./benchm
+    exit
+    ./get
+    ./benchh

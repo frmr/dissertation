@@ -1,0 +1,235 @@
+#!/bin/bash
+
+function fib {
+    for N in {20..35}
+    do
+        for I in {1..3}
+        do
+            echo fib_serial n=$N i=$I
+            echo $(./runh benchmarks/bin/fib/intel64/fib_serial $N) >> results/fib/intel64/fib_serial.csv
+
+            for T in {1..32}
+            do
+                echo fib_cilk n=$N t=$T i=$I
+                echo $(./runh benchmarks/bin/fib/intel64/fib_cilk $N $T) >> results/fib/intel64/fib_cilk.csv
+
+                echo fib_omp_none n=$N t=$T i=$I
+                export KMP_AFFINITY=none
+                echo $(./runh benchmarks/bin/fib/intel64/fib_omp $N $T) >> results/fib/intel64/fib_omp_none.csv
+
+                echo fib_omp_compact n=$N t=$T i=$I
+                export KMP_AFFINITY=compact
+                echo $(./runh benchmarks/bin/fib/intel64/fib_omp $N $T) >> results/fib/intel64/fib_omp_compact.csv
+
+                echo fib_omp_scatter n=$N t=$T i=$I
+                export KMP_AFFINITY=scatter
+                echo $(./runh benchmarks/bin/fib/intel64/fib_omp $N $T) >> results/fib/intel64/fib_omp_scatter.csv
+
+                echo fib_omp_balanced n=$N t=$T i=$I
+                export KMP_AFFINITY=balanced
+                echo $(./runh benchmarks/bin/fib/intel64/fib_omp $N $T) >> results/fib/intel64/fib_omp_balanced.csv
+            done
+        done
+    done
+}
+
+function fib_cutoff {
+    for N in {35..35}
+    do
+        for I in {1..3}
+        do
+            for C in {1..35}
+            do
+                echo fib_cutoff_cilk n=$N c=$C i=$I
+                echo $(./runh benchmarks/bin/fib/intel64/fib_cutoff_cilk $N 32 $C) >> results/fib/intel64/fib_cutoff_cilk.csv
+
+                echo fib_cutoff_omp_none n=$N c=$C i=$I
+                export KMP_AFFINITY=none
+                echo $(./runh benchmarks/bin/fib/intel64/fib_cutoff_omp $N 32 $C) >> results/fib/intel64/fib_cutoff_omp_none.csv
+
+                echo fib_cutoff_omp_compact n=$N c=$C i=$I
+                export KMP_AFFINITY=compact
+                echo $(./runh benchmarks/bin/fib/intel64/fib_cutoff_omp $N 32 $C) >> results/fib/intel64/fib_cutoff_omp_compact.csv
+
+                echo fib_cutoff_omp_scatter n=$N c=$C i=$I
+                export KMP_AFFINITY=scatter
+                echo $(./runh benchmarks/bin/fib/intel64/fib_cutoff_omp $N 32 $C) >> results/fib/intel64/fib_cutoff_omp_scatter.csv
+
+                echo fib_cutoff_omp_balanced n=$N C=$C i=$I
+                export KMP_AFFINITY=balanced
+                echo $(./runh benchmarks/bin/fib/intel64/fib_cutoff_omp $N 32 $C) >> results/fib/intel64/fib_cutoff_omp_balanced.csv
+            done
+        done
+    done
+}
+
+function msort {
+    for N in {100000..3000000..100000}
+    do
+        for I in {1..3}
+        do
+            echo msort_serial n=$N i=$I
+            echo $(./runh benchmarks/bin/msort/intel64/msort_serial $N) >> results/msort/intel64/msort_serial.csv
+
+            for T in {1..32}
+            do
+                echo msort_cilk n=$N t=$T i=$I
+                echo $(./runh benchmarks/bin/msort/intel64/msort_cilk $N $T) >> results/msort/intel64/msort_cilk.csv
+
+                echo msort_omp_none n=$N t=$T i=$I
+                export KMP_AFFINITY=none
+                echo $(./runh benchmarks/bin/msort/intel64/msort_omp $N $T) >> results/msort/intel64/msort_omp_none.csv
+
+                echo msort_omp_compact n=$N t=$T i=$I
+                export KMP_AFFINITY=compact
+                echo $(./runh benchmarks/bin/msort/intel64/msort_omp $N $T) >> results/msort/intel64/msort_omp_compact.csv
+
+                echo msort_omp_scatter n=$N t=$T i=$I
+                export KMP_AFFINITY=scatter
+                echo $(./runh benchmarks/bin/msort/intel64/msort_omp $N $T) >> results/msort/intel64/msort_omp_scatter.csv
+
+                echo msort_omp_balanced n=$N t=$T i=$I
+                export KMP_AFFINITY=balanced
+                echo $(./runh benchmarks/bin/msort/intel64/msort_omp $N $T) >> results/msort/intel64/msort_omp_balanced.csv
+            done
+        done
+    done
+}
+
+function msort_powers {
+    for N in 1024 2048 4096 8192 16384 32768 65536 131072 262144 524288 1048576 2097152 4194304
+    do
+        for I in {1..3}
+        do
+            echo msort_serial n=$N i=$I
+            echo $(./runh benchmarks/bin/msort/intel64/msort_serial $N) >> results/msort/intel64/msort_powers_serial.csv
+
+            for T in {1..32}
+            do
+                echo msort_cilk n=$N t=$T i=$I
+                echo $(./runh benchmarks/bin/msort/intel64/msort_cilk $N $T) >> results/msort/intel64/msort_powers_cilk.csv
+
+                echo msort_omp_none n=$N t=$T i=$I
+                export KMP_AFFINITY=none
+                echo $(./runh benchmarks/bin/msort/intel64/msort_omp $N $T) >> results/msort/intel64/msort_powers_omp_none.csv
+
+                echo msort_omp_compact n=$N t=$T i=$I
+                export KMP_AFFINITY=compact
+                echo $(./runh benchmarks/bin/msort/intel64/msort_omp $N $T) >> results/msort/intel64/msort_powers_omp_compact.csv
+
+                echo msort_omp_scatter n=$N t=$T i=$I
+                export KMP_AFFINITY=scatter
+                echo $(./runh benchmarks/bin/msort/intel64/msort_omp $N $T) >> results/msort/intel64/msort_powers_omp_scatter.csv
+
+                echo msort_omp_balanced n=$N t=$T i=$I
+                export KMP_AFFINITY=balanced
+                echo $(./runh benchmarks/bin/msort/intel64/msort_omp $N $T) >> results/msort/intel64/msort_powers_omp_balanced.csv
+            done
+        done
+    done
+}
+
+function nqueens {
+    for N in {2..13}
+    do
+        for I in {1..3}
+        do
+            echo nqueens_serial n=$N i=$I
+            echo $(./runh benchmarks/bin/nqueens/intel64/nqueens_serial $N) >> results/nqueens/intel64/nqueens_serial.csv
+
+            for T in {1..32}
+            do
+                echo nqueens_cilk n=$N t=$T i=$I
+                echo $(./runh benchmarks/bin/nqueens/intel64/nqueens_cilk $N $T) >> results/nqueens/intel64/nqueens_cilk.csv
+
+                echo nqueens_omp_none n=$N t=$T i=$I
+                export KMP_AFFINITY=none
+                echo $(./runh benchmarks/bin/nqueens/intel64/nqueens_omp $N $T) >> results/nqueens/intel64/nqueens_omp_none.csv
+
+                echo nqueens_omp_compact n=$N t=$T i=$I
+                export KMP_AFFINITY=compact
+                echo $(./runh benchmarks/bin/nqueens/intel64/nqueens_omp $N $T) >> results/nqueens/intel64/nqueens_omp_compact.csv
+
+                echo nqueens_omp_scatter n=$N t=$T i=$I
+                export KMP_AFFINITY=scatter
+                echo $(./runh benchmarks/bin/nqueens/intel64/nqueens_omp $N $T) >> results/nqueens/intel64/nqueens_omp_scatter.csv
+
+                echo nqueens_omp_balanced n=$N t=$T i=$I
+                export KMP_AFFINITY=balanced
+                echo $(./runh benchmarks/bin/nqueens/intel64/nqueens_omp $N $T) >> results/nqueens/intel64/nqueens_omp_balanced.csv
+            done
+        done
+    done
+}
+
+function nqueens_cutoff {
+    for N in {13..13}
+    do
+        for I in {1..3}
+        do
+            for C in {0..13}
+            do
+                echo nqueens_cutoff_cilk n=$N c=$C i=$I
+                echo $(./runh benchmarks/bin/nqueens/intel64/nqueens_cutoff_cilk $N 32 $C) >> results/nqueens/intel64/nqueens_cutoff_cilk.csv
+
+                echo nqueens_cutoff_omp_none n=$N c=$C i=$I
+                export KMP_AFFINITY=none
+                echo $(./runh benchmarks/bin/nqueens/intel64/nqueens_cutoff_omp $N 32 $C) >> results/nqueens/intel64/nqueens_cutoff_omp_none.csv
+
+                echo nqueens_cutoff_omp_compact n=$N c=$C i=$I
+                export KMP_AFFINITY=compact
+                echo $(./runh benchmarks/bin/nqueens/intel64/nqueens_cutoff_omp $N 32 $C) >> results/nqueens/intel64/nqueens_cutoff_omp_compact.csv
+
+                echo nqueens_cutoff_omp_scatter n=$N c=$C i=$I
+                export KMP_AFFINITY=scatter
+                echo $(./runh benchmarks/bin/nqueens/intel64/nqueens_cutoff_omp $N 32 $C) >> results/nqueens/intel64/nqueens_cutoff_omp_scatter.csv
+
+                echo nqueens_cutoff_omp_balanced n=$N C=$C i=$I
+                export KMP_AFFINITY=balanced
+                echo $(./runh benchmarks/bin/nqueens/intel64/nqueens_cutoff_omp $N 32 $C) >> results/nqueens/intel64/nqueens_cutoff_omp_balanced.csv
+            done
+        done
+    done
+}
+
+function uts {
+    source benchmarks/src/uts/sample_trees.sh
+    for G in {1..10}
+    do
+        for I in {1..3}
+        do
+            echo uts_serial g=$G i=$I
+            echo $(./runh benchmarks/bin/uts/intel64/uts_serial $T1 -g $G) >> results/uts/intel64/uts_serial.csv
+
+            for T in {1..32}
+            do
+                echo uts_cilk g=$G t=$T i=$I
+                echo $(./runh benchmarks/bin/uts/intel64/uts_cilk $T1 -g $G -w $T) >> results/uts/intel64/uts_cilk.csv
+
+                echo uts_omp_none g=$G t=$T i=$I
+                export KMP_AFFINITY=none
+                echo $(./runh benchmarks/bin/uts/intel64/uts_omp $T1 -g $G -w $T) >> results/uts/intel64/uts_omp_none.csv
+
+                echo uts_omp_compact g=$G t=$T i=$I
+                export KMP_AFFINITY=compact
+                echo $(./runh benchmarks/bin/uts/intel64/uts_omp $T1 -g $G -w $T) >> results/uts/intel64/uts_omp_compact.csv
+
+                echo uts_omp_scatter g=$G t=$T i=$I
+                export KMP_AFFINITY=scatter
+                echo $(./runh benchmarks/bin/uts/intel64/uts_omp $T1 -g $G -w $T) >> results/uts/intel64/uts_omp_scatter.csv
+
+                echo uts_omp_balanced g=$G t=$T i=$I
+                export KMP_AFFINITY=balanced
+                echo $(./runh benchmarks/bin/uts/intel64/uts_omp $T1 -g $G -w $T) >> results/uts/intel64/uts_omp_balanced.csv
+            done
+        done
+    done
+}
+
+fib
+fib_cutoff
+msort
+msort_powers
+nqueens
+nqueens_cutoff
+uts

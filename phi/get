@@ -1,0 +1,3 @@
+#!/bin/bash
+
+scp -r  USERNAME@IP:809130/results host/

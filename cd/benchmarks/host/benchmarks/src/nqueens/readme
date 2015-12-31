@@ -1,0 +1,12 @@
+This directory contains all implementations of the N-Queens benchmark:
+
+File                    Description
+--------------------------------------------------------------------------------
+nqueens_cilk.c          Standard version of the N-Queens benchmark using Cilk
+                        Plus.
+nqueens_cutoff_cilk.c   Cut-off version of the N-Queens benchmark using Cilk
+                        Plus.
+nqueens_cutoff_omp.c    Cut-off version of the N-Queens benchmark using OpenMP.
+nqueens_omp.c           Standard version of the N-Queens benchmark using OpenMP.
+nqueens_serial.c        Standard version of the N-Queens benchmark using no
+                        parallel framework.

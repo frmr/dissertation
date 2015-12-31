@@ -1,0 +1,6 @@
+This is the working directory for compiling the benchmarks described in the
+project report.
+
+Script      Description
+--------------------------------------------------------------------------------
+build       Compile all benchmarks for both the intel64 and MIC architectures.

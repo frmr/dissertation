@@ -1,0 +1,7 @@
+#!/bin/bash
+
+scp /opt/intel/composerxe/lib/mic/libiomp5.so mic0:/tmp/libiomp5.so
+scp /opt/intel/composerxe/lib/mic/libcilkrts.so.5 mic0:/tmp/libcilkrts.so.5
+scp ./benchm mic0:~
+scp ./runm mic0:~
+ssh mic0

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/opt/intel/vtune_amplifier_xe_2015.2.0.393444/bin64/amplxe-cl "$@"

@@ -1,0 +1,47 @@
+#!/bin/bash
+
+echo "Compiling for intel64"
+icc -std=gnu99 -O2 -o bin/fib/intel64/fib_serial src/fib/fib_serial.c -lrt
+icc -std=gnu99 -O2 -o bin/fib/intel64/fib_cilk src/fib/fib_cilk.c -lrt
+icc -std=gnu99 -O2 -o bin/fib/intel64/fib_omp src/fib/fib_omp.c -fopenmp -lrt -ansi-alias
+
+icc -std=gnu99 -O2 -o bin/fib/intel64/fib_cutoff_cilk src/fib/fib_cutoff_cilk.c -lrt
+icc -std=gnu99 -O2 -o bin/fib/intel64/fib_cutoff_omp src/fib/fib_cutoff_omp.c -fopenmp -lrt
+
+icc -std=gnu99 -O2 -o bin/msort/intel64/msort_serial src/msort/msort_serial.c -lrt
+icc -std=gnu99 -O2 -o bin/msort/intel64/msort_omp src/msort/msort_omp.c -fopenmp -lrt
+icc -std=gnu99 -O2 -o bin/msort/intel64/msort_cilk src/msort/msort_cilk.c -lrt
+
+icc -std=gnu99 -O2 -o bin/nqueens/intel64/nqueens_serial src/nqueens/nqueens_serial.c -lrt
+icc -std=gnu99 -O2 -o bin/nqueens/intel64/nqueens_omp src/nqueens/nqueens_omp.c -fopenmp -lrt
+icc -std=gnu99 -O2 -o bin/nqueens/intel64/nqueens_cilk src/nqueens/nqueens_cilk.c -lrt
+
+icc -std=gnu99 -O2 -o bin/nqueens/intel64/nqueens_cutoff_cilk src/nqueens/nqueens_cutoff_cilk.c -lrt
+icc -std=gnu99 -O2 -o bin/nqueens/intel64/nqueens_cutoff_omp src/nqueens/nqueens_cutoff_omp.c -fopenmp -lrt
+
+icc -std=gnu99 -O2 -DBRG_RNG -o bin/uts/intel64/uts_serial src/uts/uts_shm_serial.c src/uts/rng/brg_sha1.c src/uts/uts.c -lm -lrt
+icc -std=gnu99 -O2 -DBRG_RNG -o bin/uts/intel64/uts_cilk src/uts/uts_shm_cilk.c src/uts/rng/brg_sha1.c src/uts/uts.c -lm -lrt
+icc -std=gnu99 -O2 -DBRG_RNG -o bin/uts/intel64/uts_omp src/uts/uts_shm_omp.c src/uts/rng/brg_sha1.c src/uts/uts.c -lm -fopenmp -lrt
+
+echo "Compiling for mic"
+icc -std=gnu99 -mmic -O2 -o bin/fib/mic/fib_serial src/fib/fib_serial.c -lrt
+icc -std=gnu99 -mmic -O2 -o bin/fib/mic/fib_cilk src/fib/fib_cilk.c -lrt
+icc -std=gnu99 -mmic -O2 -o bin/fib/mic/fib_omp src/fib/fib_omp.c -fopenmp -lrt -ansi-alias
+
+icc -std=gnu99 -mmic -O2 -o bin/fib/mic/fib_cutoff_cilk src/fib/fib_cutoff_cilk.c -lrt
+icc -std=gnu99 -mmic -O2 -o bin/fib/mic/fib_cutoff_omp src/fib/fib_cutoff_omp.c -fopenmp -lrt -ansi-alias
+
+icc -std=gnu99 -mmic -O2 -o bin/msort/mic/msort_serial src/msort/msort_serial.c -lrt
+icc -std=gnu99 -mmic -O2 -o bin/msort/mic/msort_omp src/msort/msort_omp.c -fopenmp -lrt
+icc -std=gnu99 -mmic -O2 -o bin/msort/mic/msort_cilk src/msort/msort_cilk.c -lrt -ansi-alias
+
+icc -std=gnu99 -mmic -O2 -o bin/nqueens/mic/nqueens_serial src/nqueens/nqueens_serial.c -lrt
+icc -std=gnu99 -mmic -O2 -o bin/nqueens/mic/nqueens_omp src/nqueens/nqueens_omp.c -fopenmp -lrt
+icc -std=gnu99 -mmic -O2 -o bin/nqueens/mic/nqueens_cilk src/nqueens/nqueens_cilk.c -lrt -ansi-alias
+
+icc -std=gnu99 -mmic -O2 -o bin/nqueens/mic/nqueens_cutoff_cilk src/nqueens/nqueens_cutoff_cilk.c -lrt
+icc -std=gnu99 -mmic -O2 -o bin/nqueens/mic/nqueens_cutoff_omp src/nqueens/nqueens_cutoff_omp.c -fopenmp -lrt -ansi-alias
+
+icc -std=gnu99 -mmic -O2 -DBRG_RNG -o bin/uts/mic/uts_serial src/uts/uts_shm_serial.c src/uts/rng/brg_sha1.c src/uts/uts.c -lm -lrt
+icc -std=gnu99 -mmic -O2 -DBRG_RNG -o bin/uts/mic/uts_cilk src/uts/uts_shm_cilk.c src/uts/rng/brg_sha1.c src/uts/uts.c -lm -lrt
+icc -std=gnu99 -mmic -O2 -DBRG_RNG -o bin/uts/mic/uts_omp src/uts/uts_shm_omp.c src/uts/rng/brg_sha1.c src/uts/uts.c -lm -fopenmp -lrt -ansi-alias

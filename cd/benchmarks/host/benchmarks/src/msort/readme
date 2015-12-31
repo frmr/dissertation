@@ -1,0 +1,7 @@
+This directory contains all implementations of the merge sort benchmark:
+
+File                Description
+--------------------------------------------------------------------------------
+msort_cilk.c        Merge sort benchmark using Cilk Plus.
+msort_omp.c         Merge sort benchmark using OpenMP.
+msort_serial.c      Merge sort benchmark using no parallel framework.

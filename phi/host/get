@@ -1,0 +1,2 @@
+#!/bin/bash
+scp -r mic0:~/results ./

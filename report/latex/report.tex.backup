@@ -1,0 +1,122 @@
+\documentclass{article}
+
+\title{Evaluating Task Parallelism on Intel Xeon Phi}
+\date{2015-09-09}
+\author{Tom Farmer}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[top=2.5cm, bottom=4.0cm, left=4.0cm, right=4.0cm]{geometry}
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+
+\begin{document}
+\pagenumbering{gobble}
+\maketitle
+\newpage
+
+\begin{abstract}
+Task-parallelism is a well-known approach to multithreaded programming.
+
+In this report, four benchmarks are developed to evaluate the performance of task-parallelism on Intel Xeon and Xeon Phi processors. two common libraries that support task parallelism. Their serial, OpenMP and Cilk Plus version are compared in a range of performance.
+
+Variations of these benchmarks are used to highlight particular performance characteristics of the hardware, and to demonstrate how the impact of bottlenecks can be reduced by adjusting the parallelism strategy.
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+\section{Introduction}
+
+Hello World!
+
+\section{Background}
+\subsection{Multithreaded Applications}
+
+Structuring a document is easy!
+
+\subsection{Task Parallelism}
+			
+\subsubsection{Fork-Join Model}
+
+OR IS IT?!
+
+\subsubsection{Libraries}
+                
+Yes.
+                
+\subsubsection{Task Scheduling}
+         	
+Here is a master of math:
+
+\subsection{Cilk Plus}
+     	
+Cilk Plus is a programming language maintained by Intel that natively supports task-parallelism through a small set of keywords. It also provides additional functionality such as reduction operations, parallel loops and array notation. ‘Cilk’ refers to the original language developed by MIT, but it may also refer to the family of languages which have spawned from it. Although the original version of Cilk (sometimes called ‘MIT Cilk’ to avoid confusion) was distributed as a Cilk-to-C converter, modern versions of Cilk, including Intel’s Cilk Plus, manifest themselves as extensions to existing C/C++ compilers.
+
+This original basis in ANSI C means that Cilk Plus programs appear as normal C/C++ programs with only the addition of the Cilk keywords: cilk\verb!_!spawn, cilk\verb!_!sync and cilk\verb!_!for. An interesting feature of this model, known as serial elision, is that removing the Cilk keywords from such a program yields a valid C/C++ program [Jeffers]. While the reverse is also true - simple parallelism can be easily achieved by adding Cilk keywords to existing C/C++ programs - this does not guarantee efficiency, and the correct usage of Cilk’s features to gain effective and safe parallelism remains the responsibility of the programmer. In fact, Cilk Plus is not guaranteed to spawn new tasks when it encounters a keyword; the role of the keywords is to allow the programmer to highlight potential parallelism for the compiler, but ultimate control over the spawning of new tasks is handled by the Cilk implementation. Race conditions.
+
+One of the Cilk’s most notable features, and where it differs from OpenMP’s implementation of task parallelism, is its work-stealing scheduler. Each thread [worker?] maintains its own work queue to which new tasks are added. If a thread completes the work in its queue, it may steal work from another thread. Leiserson and Blumofe, two of Cilk’s original developers, have shown this approach to be “provably good” [blumofe et al.][leiserson et al.]. The work-stealing scheduler is explained in more detail in section 2.4.2.
+
+Cilk’s model of parallelism, though using many fewer commands than OpenMP, have been used with success in real-world applications, such as the *Socrates chess engine, which won third place at the 1994 ACM International Chess Championship [Blumofe], and ???.
+
+\subsubsection{History}
+
+Cilk began as an extension of ANSI C developed by MIT in 1994.
+The programmer was required to identify all parallel functions with the cilk keyword, which has now been removed.
+
+The version of Cilk used in this project is the relatively recent Cilk Plus, which was developed by Intel after it acquired Cilk Arts in 2009. It improves upon Cilk++ by introducing additional parallel constructs such as array extensions and effectively eliminating the difference between C/C++ and Cilk [Jeffers]. The latter provides Cilk Plus with compatibility with existing C/C++ debuggers and simplifies significantly  the process of writing Cilk programs. The usability of Cilk Plus is discussed further in [conclusion]. [Cilk Plus is used because it has the best support and is built directly into a compiler that also compiles OpenMP.]
+
+\subsubsection{Using Cilk Plus}
+
+On the Intel C++ Compiler (icc), Cilk Plus features can be used by including the Cilk header file in normal C/C++ code. The GCC compiler also requires that the -fcilkplus option be used at compile time to enable Cilk features.
+
+The three core keywords used by Cilk Plus to describe the parallelism of a given program are cilk\verb!_!spawn, cilk\verb!_!sync and cilk\verb!_!for. cilk\verb!_!spawn is placed directly before a function call in the following way:
+
+\begin{center}
+{\ttfamily cilk\verb!_!spawn foo();}
+\end{center}
+
+This line tells the compiler that the foo() function can be executed in parallel with the calling function, and may spawn a new task, adding it to the work queue of the spawning thread [?]. Cilk does not have ‘fire-and-forget’ tasks; all tasks spawned with cilk\verb!_!spawn can, and eventually must, be joined again with the current thread.
+
+cilk\verb!_!sync is used to rejoin all child tasks spawned from a given spawning block with their parent task. It is not necessary to specify which tasks are to be synchronised. Any parallelism that the spawning block created is ended when cilk\verb!_!sync is encountered. Exiting a spawning block, such as a function or try block, always invokes an implicit synchronisation, but cilk\verb!_!sync is used explicitly throughout this project for clarity. A simple example using cilk\verb!_!spawn and cilk\verb!_!sync in C is shown below.
+
+\begin{changemargin}{3em}{3em}
+
+{\ttfamily int getNumber() \{\\
+return 42; \\
+\}
+
+int example() \{
+    int number = cilk\verb!_!spawn getNumber();
+    cilk\verb!_!sync;
+    printf(“%d”, number”);
+    return 0;
+\} }
+
+\end{changemargin}
+
+\subsubsection{Work-Stealing Scheduler}
+
+
+\subsection{OpenMP}
+
+OpenMP
+     		
+\subsection{Tools}
+
+\subsection{Processor Architecture}
+
+
+    
+\newpage
+\bibliography{test.bib}
+\bibliographystyle{ieeetr}
+    
+\newpage
+\begin{appendix}
+\listoffigures
+\end{appendix}
+
+\end{document}

@@ -1,0 +1,9 @@
+This is the working directory for uploading files to the host machine with the
+following scripts. Note: All scripts require password input.
+
+Script      Description
+--------------------------------------------------------------------------------
+get         Copy all files from the "results" directory on the host machine.
+push        Copy all files from the "host" folder in this directory to the
+            physics home directory on the host machine.
+sshh        "SSH to Host". Connect to the host machine with the SSH protocol.

@@ -1,0 +1,12 @@
+Below is a description of the contents of the folders in this directory. Please
+see the readme files in each directory and subdirectory for further details.
+
+Folder      Description
+--------------------------------------------------------------------------------
+benchmarks  Contains all scripts for copying files to and from the host machine
+            and Xeon Phi. Also includes the source code for all versions of the
+            benchmarks described in the project report, as well as the scripts
+            required to compile and run them. Instructions are included.
+results     Contains all results obtained from conducting the trials described
+            in the project report. Also includes the python script used to
+            collate them and generate heatmaps.
