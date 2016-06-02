@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.27)  28 SEP 2015 09:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.2)  2 JUN 2016 21:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**test.tex
-(./test.tex
+**report.tex
+(./report.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 4 languages loaded.
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -158,8 +158,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (./test.aux)
-\openout1 = `test.aux'.
+) (./report.aux)
+\openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
@@ -346,17 +346,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--119
 
  []
 
-[2] (./test.toc [3
+[2] (./report.toc [3
 
 ])
 \tf@toc=\write3
-\openout3 = `test.toc'.
+\openout3 = `report.toc'.
 
- [4] (./test.lof [5
+ [4] (./report.lof [5
 
 ])
 \tf@lof=\write4
-\openout4 = `test.lof'.
+\openout4 = `report.lof'.
 
  [6]
 Chapter 1.
@@ -398,14 +398,7 @@ Missing character: There is no œ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no  in font cmr10!
-[5] [6]
-Missing character: There is no â in font cmtt10!
-Missing character: There is no € in font cmtt10!
-Missing character: There is no œ in font cmtt10!
-Missing character: There is no â in font cmtt10!
-Missing character: There is no € in font cmtt10!
-Missing character: There is no  in font cmtt10!
- [7]
+[5] [6] [7]
 Missing character: There is no â in font cmtt10!
 Missing character: There is no € in font cmtt10!
 Missing character: There is no œ in font cmtt10!
@@ -754,7 +747,7 @@ tmaps/mic/uts.png (PNG copy)>]
 Chapter 5.
 [52
 
-] [53] (./test.bbl [54]
+] [53] (./report.bbl [54]
 Underfull \hbox (badness 10000) in paragraph at lines 9--13
 []\OT1/ttfamily/m/n/10 Intel, ``An Overview of Pro-gram-ming for In-tel Xeon pr
 o-ces-sors and
@@ -790,19 +783,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--120
 Chapter 6.
 [58
 
-] [59] [60] (./test.aux)
+] [59] [60] (./report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 3199 strings out of 494985
- 47643 string characters out of 6180356
- 111031 words of memory out of 5000000
- 6335 multiletter control sequences out of 15000+600000
+ 3198 strings out of 495028
+ 47667 string characters out of 6181498
+ 110881 words of memory out of 5000000
+ 6328 multiletter control sequences out of 15000+600000
  11418 words of font info for 41 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
- 38i,8n,23p,2566b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 14 hyphenation exceptions out of 8191
+ 38i,8n,23p,2568b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
@@ -815,7 +808,7 @@ sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on test.pdf (68 pages, 5875181 bytes).
+Output written on report.pdf (68 pages, 5875189 bytes).
 PDF statistics:
  318 PDF objects out of 1000 (max. 8388607)
  192 compressed objects within 2 object streams

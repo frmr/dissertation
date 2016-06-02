@@ -131,7 +131,7 @@ My sincere gratitude goes to Dr. Ben Mora for his help and advice throughout thi
 
 \chapter{Introduction} \label{Sec:introduction}
 
-Multithreaded programs often to not produce a linear performance improvement over their serial counterparts. Overhead related to thread management, such as initialising threads and allotting them work, has been identified as a cause of this phenomenon, but hardware constraints like memory bandwidth and communication latency between processing cores also play a role\cite{Andrews99}. Task parallelism is an alternative to thread-centric parallelism which divides computations into so-called `tasks' and leaves the management of those tasks to a specialised scheduler\cite{Andrews99}. This approach is claimed to ease the process of developing some classes of parallel applications, especially including those featuring recursion or significant work-load imbalance\cite{Olivier09}. This project will evaluate the performance of two popular task-parallelism frameworks, Cilk Plus and OpenMP, on different hardware using a set of carefully selected benchmarks including a Fibonacci program, a parallel merge sort, a solution to the N-Queens puzzle and the Unbalanced Tree Search (UTS) artificial benchmark. Particular attention is paid in the evaluation of the results to potential hardware or software explanations for the presence of particular features, with the intention of providing recommendations for maximising parallel performance when writing applications that make use of task parallelism.
+Multithreaded programs often do not produce a linear performance improvement over their serial counterparts. Overhead related to thread management, such as initialising threads and allotting them work, has been identified as a cause of this phenomenon, but hardware constraints like memory bandwidth and communication latency between processing cores also play a role\cite{Andrews99}. Task parallelism is an alternative to thread-centric parallelism which divides computations into so-called `tasks' and leaves the management of those tasks to a specialised scheduler\cite{Andrews99}. This approach is claimed to ease the process of developing some classes of parallel applications, especially including those featuring recursion or significant work-load imbalance\cite{Olivier09}. This project will evaluate the performance of two popular task-parallelism frameworks, Cilk Plus and OpenMP, on different hardware using a set of carefully selected benchmarks including a Fibonacci program, a parallel merge sort, a solution to the N-Queens puzzle and the Unbalanced Tree Search (UTS) artificial benchmark. Particular attention is paid in the evaluation of the results to potential hardware or software explanations for the presence of particular features, with the intention of providing recommendations for maximising parallel performance when writing applications that make use of task parallelism.
 
 \section{Motivation} \label{Sec:motivation}
 
@@ -229,7 +229,7 @@ The parallel construct may be combined with the \verb!num_thread()! clause, whic
 \begin{verbatim}
 #pragma omp parallel num_threads(4)
 {
-    printf(“Hello, world!”)
+    printf("Hello, world!");
 }
 \end{verbatim}
 \end{embedcode}
@@ -875,7 +875,7 @@ One obvious area of expansion for this project is the inclusion of more task-cen
 
 Applying task-parallelism to the development of a real program may lead to more results with more practical application than found in this project. An evaluation on modern hardware of the classes of programs that have traditionally made use of task-centric frameworks, such as chess engines and scientific applications like protein folding\cite{Dailey01}, might give a more realistic indication of the scale of performance one could expect from using those frameworks. 
 
-\bibliography{report}
+\bibliography{report.bib}
 \bibliographystyle{ieeetr}
 
 \chapter{Appendices} \label{Sec:appendices}
