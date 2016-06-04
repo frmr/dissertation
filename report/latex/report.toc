@@ -42,20 +42,20 @@
 \contentsline {subsubsection}{Host}{34}
 \contentsline {subsubsection}{Xeon Phi}{36}
 \contentsline {subsection}{\numberline {4.3.2}Powers-of-two}{38}
-\contentsline {subsubsection}{Host}{38}
-\contentsline {subsubsection}{Xeon Phi}{39}
+\contentsline {subsubsection}{Host}{39}
+\contentsline {subsubsection}{Xeon Phi}{40}
 \contentsline {subsubsection}{Comparison}{41}
 \contentsline {section}{\numberline {4.4}N-Queens}{42}
 \contentsline {subsection}{\numberline {4.4.1}Standard Version}{42}
 \contentsline {subsubsection}{Host}{42}
-\contentsline {subsubsection}{Xeon Phi}{42}
-\contentsline {subsection}{\numberline {4.4.2}Cut-off}{45}
+\contentsline {subsubsection}{Xeon Phi}{43}
+\contentsline {subsection}{\numberline {4.4.2}Cut-off}{44}
 \contentsline {subsubsection}{Host}{45}
 \contentsline {subsubsection}{Xeon Phi}{45}
 \contentsline {subsubsection}{Comparison}{46}
-\contentsline {section}{\numberline {4.5}Unbalanced Tree Search}{46}
+\contentsline {section}{\numberline {4.5}Unbalanced Tree Search}{47}
 \contentsline {subsubsection}{Host}{47}
-\contentsline {subsubsection}{Xeon Phi}{48}
+\contentsline {subsubsection}{Xeon Phi}{49}
 \contentsline {chapter}{\numberline {5}Conclusion}{52}
 \contentsline {section}{\numberline {5.1}Summary and Recommendations}{52}
 \contentsline {section}{\numberline {5.2}Achievements}{53}

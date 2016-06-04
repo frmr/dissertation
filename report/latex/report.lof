@@ -15,7 +15,7 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Speedup of the Fibonacci benchmark on the host machine.}}{28}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Heatmaps showing performance spread of Fibonacci benchmark for different combinations of n and t on the host machine.}}{29}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Execution time (milliseconds) of the Fibonacci benchmark on the Xeon Phi.}}{30}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Speedup of the Fibonacci benchmark on the Xeon Phi.}}{30}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Speedup of the Fibonacci benchmark on the Xeon Phi.}}{31}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Heatmaps showing performance spread of Fibonacci benchmark for different combinations of n and t on the Xeon Phi.}}{32}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Execution time (left) and speedup (right) of the Fibonacci benchmark with cut-off on the host machine.}}{33}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Execution time (left) and speedup (right) of the Fibonacci benchmark with cut-off on the Xeon Phi.}}{33}
@@ -23,7 +23,7 @@
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Speedup of the merge sort benchmark on the host machine.}}{35}
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Heatmaps showing performance spread of merge sort benchmark for different combinations of n and t on the host machine.}}{36}
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Execution time (milliseconds) of the merge sort benchmark on the Xeon Phi.}}{37}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Speedup of the merge sort benchmark on the Xeon Phi.}}{37}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Speedup of the merge sort benchmark on the Xeon Phi.}}{38}
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Heatmaps showing performance spread of merge sort benchmark for different combinations of n and t on the Xeon Phi.}}{39}
 \contentsline {figure}{\numberline {4.15}{\ignorespaces Execution time (milliseconds) of the powers-of-two merge sort benchmark on the host machine.}}{40}
 \contentsline {figure}{\numberline {4.16}{\ignorespaces Speedup of the powers-of-two merge sort benchmark on the host machine.}}{40}
@@ -32,10 +32,10 @@
 \contentsline {figure}{\numberline {4.19}{\ignorespaces Execution time (milliseconds) of the N-Queens benchmark on the host machine.}}{43}
 \contentsline {figure}{\numberline {4.20}{\ignorespaces Speedup of the N-Queens benchmark on the host machine.}}{43}
 \contentsline {figure}{\numberline {4.21}{\ignorespaces Execution time (milliseconds) of the N-Queens benchmark on the Xeon Phi.}}{44}
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Speedup of the N-Queens benchmark on the Xeon Phi.}}{44}
-\contentsline {figure}{\numberline {4.23}{\ignorespaces Execution time (left) and speedup (right) of the N-Queens benchmark with cut-off on the host machine.}}{45}
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Speedup of the N-Queens benchmark on the Xeon Phi.}}{45}
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Execution time (left) and speedup (right) of the N-Queens benchmark with cut-off on the host machine.}}{46}
 \contentsline {figure}{\numberline {4.24}{\ignorespaces Execution time (left) and speedup (right) of the N-Queens benchmark with cut-off on the Xeon Phi.}}{46}
-\contentsline {figure}{\numberline {4.25}{\ignorespaces Execution time (milliseconds) of the UTS benchmark on the host machine.}}{47}
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Execution time (milliseconds) of the UTS benchmark on the host machine.}}{48}
 \contentsline {figure}{\numberline {4.26}{\ignorespaces Speedup of the UTS benchmark on the host machine.}}{48}
 \contentsline {figure}{\numberline {4.27}{\ignorespaces Heatmaps showing performance spread of the UTS benchmark for different combinations of n and t on the host machine.}}{49}
 \contentsline {figure}{\numberline {4.28}{\ignorespaces Execution time (milliseconds) of the UTS benchmark on the Xeon Phi.}}{50}
